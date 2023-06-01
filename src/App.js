@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+import { Content } from './components/Content.jsx'
+import { Header } from './components/TodoList/Header.jsx'
+const todos = [
+	{ id: 1, title: 'Read book' },
+	{ id: 2, title: 'Learn react' },
+	{ id: 3, title: 'JS' },
+	{ id: 4, title: 'Redux' },
+]
+export class App extends React.Component {
+	render() {
+		return (
+			<>
+				<Header />
+				<Content todos={todos} />
+			</>
+		)
+	}
 }
 
-export default App;
+// function App() {
+// 	const todos = [
+// 		{ id: 1, title: 'Read book' },
+// 		{ id: 2, title: 'Learn react' },
+// 		{ id: 3, title: 'JS' },
+// 		{ id: 4, title: 'Redux' },
+// 	]
+// 	return (
+// 		<>
+// 			<Header />
+// 			<Content todos={todos} />
+// 		</>
+// 	)
+// }
+
+// export default App
